@@ -44,8 +44,18 @@ NOTE : DO NOT USE count() method
 import unittest
 
 def equal_opportunity(lst):
-  equals = []
+ equals = []
   # write your code here
+  for i in lst:
+    a=0
+    b=0
+    for j in i:
+      if(j==1):
+        a=a+1
+      if(j==0):
+        b=b+1
+    if(a==b):
+      equals.append(lst.index(i))
   return equals
 
 
