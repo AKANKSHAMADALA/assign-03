@@ -28,11 +28,23 @@ See the below example
 
 import unittest
 
-def oneD_to_sorted2D(lst):
+def oneD_to_sorted2D(lst,shape):
   sorted_list = []
-
+  # Write your code here
+  lst.sort()
+  b=int(shape[0])
+  c=int(shape[2])
+  l=[]
+  j=0
+  for i in range(0,len(lst)):
+    if(j>=c):
+      sorted_list.append(l)
+      l=[]
+      j=0
+    l.append(lst[i])
+    j=j+1
+  sorted_list.append(l)
   return sorted_list
-
 class Dict_to_list(unittest.TestCase):
   def test_01(self):
     input = [10,3,2,5,6,7]
